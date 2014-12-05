@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>List of opinions</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+</head>
+<body>
+<div class="page">
+<h1 class="Page header">List of opinions</h1>
+
+<table class="table table-striped">
+<thead>
+<tr>
+	<td>Opinion Number</td>
+	<td>Title</td>
+	<td>Date</td>
+</tr>
+</thead>
+
+<tbody>
+{% for opinion in data %}
+<tr>
+	<td>{{ opinion.opinion_number|safe }}</td>
+	<td>{{ opinion.title|safe }}</td>
+	<td>{{ opinion.date|safe }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+</body>
+</html>  
